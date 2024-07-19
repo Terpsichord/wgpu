@@ -49,10 +49,15 @@ use std::{
     mem::ManuallyDrop,
     num::NonZeroU32,
     sync::{
-        atomic::{AtomicBool, AtomicU64, Ordering},
+        atomic::{AtomicBool, Ordering},
         Arc, Weak,
     },
 };
+#[cfg(target_has_atomic = "64")]
+use std::sync::atomic::AtomicU64;
+
+#[cfg(not(target_has_atomic = "64")]
+use portable_atomic::AtomicU64;
 
 use super::{
     queue::{self, Queue},
