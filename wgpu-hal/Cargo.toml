@@ -190,6 +190,9 @@ libc = "0.2"
 android_system_properties = { version = "0.1.1", optional = true }
 ndk-sys = { version = "0.5.0", optional = true }
 
+[target.'cfg(target_has_atomic = "64")'.dependencies]
+portable-atomic = "1.6.0"
+
 [dependencies.naga]
 path = "../naga"
 version = "22.0.0"
