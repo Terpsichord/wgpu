@@ -64,7 +64,6 @@ path = "./wgpu-hal"
 version = "0.21.0"
 
 [workspace.dependencies.naga]
-path = "./naga"
 version = "0.20.0"
 
 [workspace.dependencies]

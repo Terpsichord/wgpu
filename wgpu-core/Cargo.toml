@@ -116,7 +116,6 @@ smallvec = "1"
 thiserror = "1"
 
 [dependencies.naga]
-path = "../naga"
 version = "0.20.0"
 
 [dependencies.wgt]
