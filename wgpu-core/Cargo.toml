@@ -136,5 +136,8 @@ web-sys = { version = "0.3.69", features = [
     "OffscreenCanvas",
 ] }
 
+[target.'cfg(not(target_has_atomic = "64"))'.dependencies]
+portable-atomic = "1.6.0"
+
 [build-dependencies]
 cfg_aliases.workspace = true

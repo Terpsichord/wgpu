@@ -189,6 +189,9 @@ path = "../naga"
 version = "0.20.0"
 features = ["wgsl-in"]
 
+[target.'cfg(not(target_has_atomic = "64"))'.dependencies]
+portable-atomic = "1.6.0"
+
 [dev-dependencies]
 cfg-if = "1"
 env_logger = "0.11"
